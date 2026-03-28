@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beitragswandel – Besserer Schutz, weniger Beitrag | Online-Beratung</title>
+  <meta name="description" content="Zahlen Sie als gesetzlich Versicherter mehr als nötig? Vergleichen Sie GKV und PKV – besserer Schutz kann günstiger sein. Kostenloses Erstgespräch buchen.">
+  <meta name="keywords" content="PKV Beratung, private Krankenversicherung, GKV PKV Vergleich, Krankenversicherung wechseln, PKV Vorteile, Beitragsvergleich">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://beitragswandel.de">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Beitragswandel – PKV-Beratung die sich rechnet">
+  <meta property="og:description" content="Viele gesetzlich Versicherte zahlen mehr als nötig – und bekommen dafür weniger Leistung. Lohnt sich der Wechsel in die PKV?">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://beitragswandel.de">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Beitragswandel">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Beitragswandel",
+    "description": "GKV oder PKV? Persönliche Beratung für die richtige Krankenversicherung – deutschlandweit online",
+    "url": "https://beitragswandel.de",
+    "areaServed": { "@type": "Country", "name": "Deutschland" },
+    "serviceType": "Private Krankenversicherung Beratung",
+    "priceRange": "Erstgespräch kostenfrei",
+    "knowsAbout": ["Private Krankenversicherung", "GKV PKV Vergleich", "Krankenversicherung Wechsel", "Altersvorsorge"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: { 50: '#FFFDF7', 100: '#FFF9E8', 200: '#FFF0C4', 300: '#FFE49A' },
+            gold: { 400: '#D4A843', 500: '#C4942F', 600: '#A67B24', 700: '#8A6520' },
+            dark: { 800: '#2D2A26', 900: '#1A1815' }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .chart-bar { transition: height 1.2s cubic-bezier(0.4, 0, 0.2, 1); }
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+    .accordion-content.open { max-height: 600px; }
+    .accordion-chevron { transition: transform 0.3s ease; }
+    .accordion-chevron.open { transform: rotate(180deg); }
+    @keyframes subtle-pulse { 0%, 100% { box-shadow: 0 10px 25px -5px rgba(196,148,47,0.25); } 50% { box-shadow: 0 10px 35px -5px rgba(196,148,47,0.45); } }
+    .cta-pulse { animation: subtle-pulse 3s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-cream-50 text-dark-800 font-body">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full bg-cream-50/95 backdrop-blur-sm border-b border-cream-200 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="font-display text-2xl font-bold text-gold-600">Beitragswandel</a>
+      <a href="#termin" class="bg-gold-500 text-white px-7 py-3 rounded-lg font-semibold text-base hover:bg-gold-600 transition shadow-lg shadow-gold-500/20">
+        Erstgespräch buchen
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-20 px-6">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div class="fade-in">
+        <h1 class="font-display text-4xl lg:text-5xl font-bold leading-tight text-dark-900 mb-6">
+          Ihre Krankenkassenbeiträge<br>
+          <span class="text-gold-500">müssen nicht so hoch sein.</span>
+        </h1>
+        <p class="text-lg text-dark-800/80 mb-8 max-w-lg leading-relaxed">
+          Viele gesetzlich Versicherte zahlen hohe Beiträge – und bekommen dafür nur Standardleistungen. Mit der richtigen privaten Krankenversicherung können Sie besser abgesichert sein und oft sogar weniger zahlen.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#termin" class="bg-gold-500 text-white px-10 py-5 rounded-xl font-semibold text-xl hover:bg-gold-600 transition shadow-lg shadow-gold-500/25 text-center cta-pulse">
+            Kostenloses Erstgespräch →
+          </a>
+          <a href="#vergleich" class="border-2 border-gold-400 text-gold-600 px-8 py-4 rounded-xl font-semibold hover:bg-gold-400/10 transition text-center">
+            Beitragsvergleich ansehen
+          </a>
+        </div>
+        <div class="mt-8 flex items-center gap-6 text-sm text-dark-800/60">
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            100% unabhängig
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Erstgespräch kostenfrei
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-gold-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Deutschlandweit online
+          </span>
+        </div>
+      </div>
+
+      <!-- VIDEO PLACEHOLDER -->
+      <div class="fade-in" id="video">
+        <div class="bg-gradient-to-br from-cream-200 to-cream-100 rounded-2xl aspect-video flex flex-col items-center justify-center border border-cream-300 shadow-xl">
+          <div class="w-20 h-20 bg-gold-500 rounded-full flex items-center justify-center shadow-lg shadow-gold-500/30 mb-4 cursor-pointer hover:scale-105 transition">
+            <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
+          </div>
+          <p class="text-gold-600 font-semibold">Persönliche Vorstellung</p>
+          <p class="text-dark-800/50 text-sm mt-1">Video kommt in Kürze</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZAHLEN -->
+  <section class="py-16 px-6 bg-white border-y border-cream-200">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="fade-in">
+        <div class="font-display text-3xl font-bold text-gold-500">Besserer Schutz</div>
+        <div class="text-sm text-dark-800/60 mt-1">Chefarzt, Zahnersatz, freie Arztwahl</div>
+      </div>
+      <div class="fade-in">
+        <div class="font-display text-3xl font-bold text-gold-500">Weniger Beitrag</div>
+        <div class="text-sm text-dark-800/60 mt-1">Oft günstiger als die GKV</div>
+      </div>
+      <div class="fade-in">
+        <div class="font-display text-3xl font-bold text-gold-500">0 €</div>
+        <div class="text-sm text-dark-800/60 mt-1">Für das Erstgespräch</div>
+      </div>
+      <div class="fade-in">
+        <div class="font-display text-3xl font-bold text-gold-500">100%</div>
+        <div class="text-sm text-dark-800/60 mt-1">Persönliche Beratung</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEITRAGSVERGLEICH CHART -->
+  <section id="vergleich" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="font-display text-3xl font-bold mb-4">GKV vs. PKV – der Beitragsvergleich</h2>
+        <p class="text-dark-800/70 max-w-2xl mx-auto">Gesetzliche Krankenkassen werden durch den demografischen Wandel immer teurer. Eine private Krankenversicherung kann mehr Leistung zu einem besseren Preis bieten.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl border border-cream-200 p-8 fade-in" id="chart-container">
+        <div class="flex items-end justify-between gap-3 h-64 mb-6" id="chart">
+          <!-- Bars werden per JS generiert -->
+        </div>
+        <div class="flex justify-center gap-8 text-sm">
+          <span class="flex items-center gap-2"><span class="w-4 h-4 rounded bg-red-300 inline-block"></span> Ohne Optimierung</span>
+          <span class="flex items-center gap-2"><span class="w-4 h-4 rounded bg-gold-500 inline-block"></span> Nach Tarifwechsel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUSKLAPPBARE BEREICHE -->
+  <section class="py-20 px-6 bg-white border-y border-cream-200">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="font-display text-3xl font-bold mb-4">Häufige Fragen</h2>
+        <p class="text-dark-800/70">Klicken Sie auf eine Frage, um mehr zu erfahren.</p>
+      </div>
+      <div class="space-y-3 fade-in">
+
+        <div class="accordion border border-cream-200 rounded-xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-semibold hover:bg-cream-100 transition">
+            <span>Lohnt sich ein Wechsel von der GKV in die PKV?</span>
+            <svg class="accordion-chevron w-5 h-5 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="accordion-content px-6 text-dark-800/70 leading-relaxed">
+            <div class="pb-4">Das hängt von Ihrer persönlichen Situation ab: Einkommen, Alter, Familienplanung und gewünschte Leistungen. Für viele Angestellte ab der Versicherungspflichtgrenze und Selbstständige bietet die PKV deutlich bessere Leistungen – oft zu einem niedrigeren Beitrag als in der GKV. In einem Erstgespräch zeigen wir Ihnen anhand Ihrer konkreten Zahlen, ob sich der Wechsel für Sie rechnet.</div>
+          </div>
+        </div>
+
+        <div class="accordion border border-cream-200 rounded-xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-semibold hover:bg-cream-100 transition">
+            <span>Was bekomme ich in der PKV, was die GKV nicht bietet?</span>
+            <svg class="accordion-chevron w-5 h-5 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="accordion-content px-6 text-dark-800/70 leading-relaxed">
+            <div class="pb-4">Freie Arztwahl ohne Überweisung, Chefarztbehandlung, Ein- oder Zweibettzimmer im Krankenhaus, 100% Zahnersatz, Heilpraktiker, weltweiter Versicherungsschutz und keine Wartezeiten auf Termine. Dazu kommt: Ihr Beitrag richtet sich nach dem gewählten Tarif, nicht nach Ihrem Gehalt – bei steigendem Einkommen wird die PKV relativ immer günstiger.</div>
+          </div>
+        </div>
+
+        <div class="accordion border border-cream-200 rounded-xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-semibold hover:bg-cream-100 transition">
+            <span>Werden PKV-Beiträge im Alter unbezahlbar?</span>
+            <svg class="accordion-chevron w-5 h-5 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="accordion-content px-6 text-dark-800/70 leading-relaxed">
+            <div class="pb-4">Ein weit verbreitetes Vorurteil. Tatsächlich bildet die PKV Altersrückstellungen, der gesetzliche 10%-Zuschlag fällt ab 60 weg, und Krankentagegeld entfällt in der Rente. Dazu kommt: GKV-Beiträge steigen durch den demografischen Wandel mindestens genauso stark. Mit unserer Beitragsbremse investieren Sie die monatliche Ersparnis steuerbegünstigt – und haben im Alter eine zusätzliche Einnahmequelle.</div>
+          </div>
+        </div>
+
+        <div class="accordion border border-cream-200 rounded-xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-semibold hover:bg-cream-100 transition">
+            <span>Wie läuft der Beratungsprozess ab?</span>
+            <svg class="accordion-chevron w-5 h-5 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="accordion-content px-6 text-dark-800/70 leading-relaxed">
+            <div class="pb-4">
+              <strong>1. Kostenloses Erstgespräch</strong> (15 Min. per Video) – Wir lernen Ihre Situation kennen, erklären die fünf Kernbereiche der PKV und zeigen Ihnen einen konkreten Vergleich.<br><br>
+              <strong>2. Finanzanalyse & Risikovoranfrage</strong> – Wir analysieren Ihre aktuelle Absicherung, Ihren Tarif und identifizieren die besten Optionen für Ihre persönliche Situation.<br><br>
+              <strong>3. Persönliche Strategieberatung</strong> – Sie erhalten einen detaillierten Beitragsvergleich mit konkreten Zahlen, inklusive Zukunftsbetrachtung und Beitragsbremse im Alter.<br><br>
+              <strong>4. Umsetzung</strong> – Wir begleiten den kompletten Prozess und kommunizieren direkt mit Ihrer Versicherung.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion border border-cream-200 rounded-xl overflow-hidden">
+          <button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between px-6 py-4 text-left font-semibold hover:bg-cream-100 transition">
+            <span>Warum ist das Erstgespräch kostenlos?</span>
+            <svg class="accordion-chevron w-5 h-5 text-gold-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="accordion-content px-6 text-dark-800/70 leading-relaxed">
+            <div class="pb-4">Wir möchten, dass Sie ohne Risiko herausfinden können, ob ein Wechsel in die PKV für Sie sinnvoll ist. Im 15-minütigen Erstgespräch zeigen wir Ihnen anhand Ihrer konkreten Zahlen, wie sich GKV und PKV für Sie unterscheiden. Erst wenn Sie sich für eine Zusammenarbeit entscheiden, fällt eine einmalige Beratungsgebühr an – mit Geld-zurück-Garantie.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WARUM WIR -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12 fade-in">
+        <h2 class="font-display text-3xl font-bold mb-4">Warum Beitragswandel?</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 border border-cream-200 shadow-sm fade-in">
+          <div class="w-14 h-14 bg-cream-200 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-3">Unabhängig</h3>
+          <p class="text-dark-800/70 leading-relaxed">Wir arbeiten nicht für eine Versicherung, sondern für Sie. Unsere Empfehlungen basieren ausschließlich auf Ihrem Vorteil.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-cream-200 shadow-sm fade-in">
+          <div class="w-14 h-14 bg-cream-200 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-3">Datengetrieben</h3>
+          <p class="text-dark-800/70 leading-relaxed">Wir nutzen eigene Analysetools und aktuelle Marktdaten, um die optimale Tarifkombination für Ihre Situation zu finden.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 border border-cream-200 shadow-sm fade-in">
+          <div class="w-14 h-14 bg-cream-200 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-semibold mb-3">Persönlich</h3>
+          <p class="text-dark-800/70 leading-relaxed">Kein Callcenter, kein Chatbot. Sie sprechen immer direkt mit Ihrem Berater – vom ersten Gespräch bis zur Umsetzung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / TERMIN -->
+  <section id="termin" class="py-20 px-6 bg-gradient-to-br from-dark-900 to-dark-800">
+    <div class="max-w-3xl mx-auto text-center fade-in">
+      <h2 class="font-display text-3xl lg:text-4xl font-bold text-cream-50 mb-6">
+        Jetzt kostenloses Erstgespräch vereinbaren
+      </h2>
+      <p class="text-cream-100/80 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+        In 15 Minuten erfahren Sie, ob und wie viel Sie bei Ihrer PKV sparen können. Unverbindlich und kostenfrei.
+      </p>
+      <a href="https://calendly.com/beitragswandel/erstgespraech" target="_blank" rel="noopener"
+         class="inline-block bg-gold-500 text-white px-12 py-6 rounded-xl font-semibold text-2xl hover:bg-gold-400 transition shadow-2xl shadow-gold-500/30 hover:shadow-gold-400/40 cta-pulse">
+        Termin vereinbaren →
+      </a>
+      <p class="text-cream-100/50 text-sm mt-6">Deutschlandweit · Online per Video</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 px-6 bg-dark-900 border-t border-dark-800/50">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-cream-100/40">
+      <span class="font-display text-lg text-cream-100/60">Beitragswandel</span>
+      <div class="flex gap-6">
+        <a href="/impressum" class="hover:text-cream-100/70 transition">Impressum</a>
+        <a href="/datenschutz" class="hover:text-cream-100/70 transition">Datenschutz</a>
+      </div>
+      <span>© 2026 Beitragswandel. Alle Rechte vorbehalten.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Intersection Observer for fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Accordion
+    function toggleAccordion(btn) {
+      const content = btn.nextElementSibling;
+      const chevron = btn.querySelector('.accordion-chevron');
+      const isOpen = content.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+      document.querySelectorAll('.accordion-chevron').forEach(c => c.classList.remove('open'));
+      // Toggle clicked
+      if (!isOpen) {
+        content.classList.add('open');
+        chevron.classList.add('open');
+      }
+    }
+
+    // Chart animation
+    function initChart() {
+      const container = document.getElementById('chart');
+      const years = ['2020','2021','2022','2023','2024','2025','2026','2027','2028','2029','2030'];
+      const ohne = [520, 545, 572, 600, 630, 661, 694, 729, 765, 804, 844]; // ~5% growth
+      const mit  = [520, 545, 572, 600, 630, 500, 510, 520, 530, 540, 551]; // switch at 2025
+
+      const maxVal = Math.max(...ohne);
+      container.innerHTML = '';
+
+      years.forEach((year, i) => {
+        const group = document.createElement('div');
+        group.className = 'flex-1 flex flex-col items-center gap-1';
+
+        const bars = document.createElement('div');
+        bars.className = 'flex gap-0.5 items-end w-full justify-center h-52';
+
+        const barOhne = document.createElement('div');
+        barOhne.className = 'chart-bar w-3 md:w-4 rounded-t bg-red-300';
+        barOhne.style.height = '0px';
+        setTimeout(() => { barOhne.style.height = (ohne[i] / maxVal * 100) + '%'; }, 200 + i * 80);
+
+        const barMit = document.createElement('div');
+        barMit.className = 'chart-bar w-3 md:w-4 rounded-t bg-gold-500';
+        barMit.style.height = '0px';
+        setTimeout(() => { barMit.style.height = (mit[i] / maxVal * 100) + '%'; }, 400 + i * 80);
+
+        bars.appendChild(barOhne);
+        bars.appendChild(barMit);
+
+        const label = document.createElement('div');
+        label.className = 'text-xs text-dark-800/50 mt-1';
+        label.textContent = year;
+
+        group.appendChild(bars);
+        group.appendChild(label);
+        container.appendChild(group);
+      });
+    }
+
+    // Init chart when visible
+    const chartObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { initChart(); chartObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.3 });
+    chartObs.observe(document.getElementById('chart-container'));
+  </script>
+</body>
+</html>
