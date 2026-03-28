@@ -39,12 +39,6 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
-            NEXT_PUBLIC_PAYLOAD_URL=${{ secrets.NEXT_PUBLIC_PAYLOAD_URL }}
-            NEXT_PUBLIC_PAYLOAD_API_KEY=${{ secrets.NEXT_PUBLIC_PAYLOAD_API_KEY }}
-            NEXT_PUBLIC_APP_URL=${{ secrets.NEXT_PUBLIC_APP_URL }}
-            NEXT_PUBLIC_FRONTEND_URL=${{ secrets.NEXT_PUBLIC_FRONTEND_URL }}
-            NEXT_PUBLIC_N8N_WEBHOOK_AUTH=${{ secrets.NEXT_PUBLIC_N8N_WEBHOOK_AUTH }}
 
   deploy:
     needs: build-and-push
@@ -52,8 +46,7 @@ jobs:
     steps:
       - name: Deploy to Coolify
         run: |
-          echo "Deploying sha-$(echo ${{ github.sha }} | cut -c1-7) to Coolify..."
           curl -sf -X POST "https://coolify.kailohmann.de/api/v1/deploy" \
             -H "Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}" \
             -H "Content-Type: application/json" \
-            -d '{"uuid": "fkg8k0g0g8c00gwk00s44osw", "force": true}'
+            -d '{"uuid": "zck4w0w0wcc88gg044gccco0", "force": true}'
