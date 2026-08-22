@@ -1,45 +1,33 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Krankenkassenbeiträge im Vergleich: GKV und PKV – Kennenlerngespräch kostenlos | Beitragswandel</title>
-  <meta name="description" content="GKV-PKV-Vergleich mit Ihren Zahlen statt Durchschnittswerten. Kostenloses Kennenlerngespräch, 15 Minuten per Video, deutschlandweit online.">
-  <link rel="canonical" href="https://beitragswandel.de/">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Krankenkassenbeiträge im Vergleich: GKV und PKV – Kennenlerngespräch kostenlos | Beitragswandel">
-  <meta property="og:description" content="GKV-PKV-Vergleich mit Ihren Zahlen statt Durchschnittswerten. Kostenloses Kennenlerngespräch, 15 Minuten per Video, deutschlandweit online.">
-  <meta property="og:url" content="https://beitragswandel.de/">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" href="/assets/fonts/fonts.css">
-  <style>
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: #FBF5EF; color: #3B322D; font-family: 'Source Sans 3', sans-serif; }
-    a { color: #9A6B2E; }
-    a:hover { color: #BE8A4A; }
-    .btn-primary { background: #9A6B2E; color: #FFFFFF; text-decoration: none; font-weight: 600; border-radius: 6px; display: inline-block; }
-    .btn-primary:hover { background: #BE8A4A; color: #FFFFFF; }
-    .btn-cta { background: #FFFFFF; color: #9A6B2E; text-decoration: none; font-weight: 700; border-radius: 6px; display: inline-block; }
-    .btn-cta:hover { background: #F4E9D6; color: #9A6B2E; }
-    details { background: #FFFFFF; border: 1px solid #EADFD3; border-radius: 8px; overflow: hidden; }
-    details summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; padding: 18px 22px; font-family: 'Source Sans 3', sans-serif; font-size: 17px; font-weight: 600; color: #3B322D; list-style: none; }
-    details summary::-webkit-details-marker { display: none; }
-    details summary::marker { display: none; }
-    details summary::after { font-family: 'Lora', serif; font-size: 20px; color: #BE8A4A; flex-shrink: 0; content: "+"; }
-    details[open] summary::after { content: "–"; }
-    .faq-answer { margin: 0; padding: 0 22px 20px; font-size: 16px; line-height: 1.65; color: #7A6E64; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Krankenkassenbeiträge im Vergleich: GKV und PKV – Kennenlerngespräch kostenlos | Beitragswandel</title>
+<meta name="description" content="GKV-PKV-Vergleich mit Ihren Zahlen statt Durchschnittswerten. Kostenloses Kennenlerngespräch, 15 Minuten per Video, deutschlandweit online.">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #FBF5EF; color: #3B322D; font-family: 'Source Sans 3', sans-serif; }
+  a { color: #9A6B2E; }
+  a:hover { color: #BE8A4A; }
+</style>
+</helmet>
 
 <header style="position: sticky; top: 0; z-index: 10; background: #FBF5EFee; backdrop-filter: blur(8px); border-bottom: 1px solid #EADFD3">
   <div style="max-width: 1080px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
     <div style="font-family: 'Lora', serif; font-weight: 700; font-size: 21px; color: #9A6B2E; letter-spacing: 0.2px">Beitragswandel</div>
-    <a href="https://calendly.com/beitragswandel/erstgespraech" class="btn-primary" style="font-size: 15px; padding: 10px 18px">Kennenlerngespräch (kostenlos)</a>
+    <a href="{{ bookingUrl }}" style="background: #9A6B2E; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; padding: 10px 18px; border-radius: 6px" style-hover="background: #BE8A4A; color: #FFFFFF">Kennenlerngespräch (kostenlos)</a>
   </div>
 </header>
 
-<main>
+<main data-screen-label="Landingpage">
 
   <!-- Hero -->
   <section style="max-width: 1080px; margin: 0 auto; padding: 72px 24px 48px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center">
@@ -47,7 +35,7 @@
       <h1 style="font-family: 'Lora', serif; font-weight: 600; font-size: 44px; line-height: 1.15; margin: 0 0 20px; color: #3B322D; text-wrap: pretty">Ihre Krankenkassenbeiträge müssen nicht so hoch sein.</h1>
       <p style="font-size: 18px; line-height: 1.6; color: #7A6E64; margin: 0 0 28px; text-wrap: pretty">Viele gesetzlich Versicherte zahlen den Höchstbeitrag für Standardleistungen. Mit dem passenden Krankenversicherungskonzept sind bessere Leistungen möglich – oft bei geringerem Gesamtbeitrag. Ob das auf Sie zutrifft, zeigt eine Rechnung mit Ihren Zahlen.</p>
       <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap">
-        <a href="https://calendly.com/beitragswandel/erstgespraech" class="btn-primary" style="font-size: 17px; padding: 14px 24px">Kennenlerngespräch vereinbaren</a>
+        <a href="{{ bookingUrl }}" style="background: #9A6B2E; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 17px; padding: 14px 24px; border-radius: 6px" style-hover="background: #BE8A4A; color: #FFFFFF">Kennenlerngespräch vereinbaren</a>
         <a href="#zahlen" style="font-weight: 600; font-size: 16px">Zu den Zahlen ↓</a>
       </div>
       <p style="font-size: 14px; color: #9C7C5C; margin: 16px 0 0">15 Minuten · per Video · kostenlos und unverbindlich</p>
@@ -61,13 +49,15 @@
     </div>
   </section>
 
-  <!-- Aktualitätsanker -->
-  <section style="max-width: 1080px; margin: 0 auto; padding: 0 24px 40px">
-    <div style="background: #F4E9D6; border: 1.5px dashed #BE8A4A; border-radius: 8px; padding: 18px 22px; display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap">
-      <span style="font-family: monospace; font-size: 11px; font-weight: 700; color: #9A6B2E; background: #FFFFFF; border: 1px solid #EADFD3; border-radius: 4px; padding: 3px 8px; white-space: nowrap">PLATZHALTER · VOR EINSATZ RECHTLICH PRÜFEN</span>
-      <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: #3B322D; flex: 1; min-width: 280px">Für Angestellte mit einem Jahresbrutto zwischen der Versicherungspflichtgrenze 2026 (77.400 €) und dem erwarteten deutlich höheren Wert 2027 schließt sich das Wechselfenster zum Jahresende 2026.</p>
-    </div>
-  </section>
+  <!-- Aktualitätsanker (Platzhalter) -->
+  <sc-if value="{{ showAnker }}" hint-placeholder-val="{{ true }}">
+    <section style="max-width: 1080px; margin: 0 auto; padding: 0 24px 40px">
+      <div style="background: #F4E9D6; border: 1.5px dashed #BE8A4A; border-radius: 8px; padding: 18px 22px; display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap">
+        <span style="font-family: monospace; font-size: 11px; font-weight: 700; color: #9A6B2E; background: #FFFFFF; border: 1px solid #EADFD3; border-radius: 4px; padding: 3px 8px; white-space: nowrap">PLATZHALTER · VOR EINSATZ RECHTLICH PRÜFEN</span>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: #3B322D; flex: 1; min-width: 280px">Für Angestellte mit einem Jahresbrutto zwischen der Versicherungspflichtgrenze 2026 (77.400 €) und dem erwarteten deutlich höheren Wert 2027 schließt sich das Wechselfenster zum Jahresende 2026.</p>
+      </div>
+    </section>
+  </sc-if>
 
   <!-- Vertrauenssignale -->
   <section style="border-top: 1px solid #EADFD3; border-bottom: 1px solid #EADFD3; background: #FFFFFF">
@@ -82,7 +72,7 @@
   <!-- Zwei Systeme -->
   <section id="systeme" style="max-width: 1080px; margin: 0 auto; padding: 80px 24px 0">
     <h2 style="font-family: 'Lora', serif; font-weight: 600; font-size: 32px; color: #9A6B2E; margin: 0 0 12px">Zwei Systeme, zwei Logiken</h2>
-    <p style="font-size: 17px; line-height: 1.6; color: #7A6E64; max-width: 720px; margin: 0 0 32px; text-wrap: pretty">GKV und PKV funktionieren grundlegend verschieden – nicht „gut gegen schlecht", sondern zwei unterschiedliche Prinzipien. Welches zu Ihnen passt, hängt von Ihrer Situation ab.</p>
+    <p style="font-size: 17px; line-height: 1.6; color: #7A6E64; max-width: 720px; margin: 0 0 32px; text-wrap: pretty">GKV und PKV funktionieren grundlegend verschieden – nicht „gut gegen schlecht“, sondern zwei unterschiedliche Prinzipien. Welches zu Ihnen passt, hängt von Ihrer Situation ab.</p>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px">
       <div style="background: #FFFFFF; border: 1px solid #EADFD3; border-top: 3px solid #C0574E; border-radius: 8px; padding: 28px">
         <h3 style="font-family: 'Lora', serif; font-size: 20px; color: #C0574E; margin: 0 0 14px">Gesetzliche Krankenversicherung</h3>
@@ -108,31 +98,13 @@
     <h2 style="font-family: 'Lora', serif; font-weight: 600; font-size: 32px; color: #9A6B2E; margin: 0 0 12px">Die fünf Bereiche, in denen sich die Systeme unterscheiden</h2>
     <p style="font-size: 17px; line-height: 1.6; color: #7A6E64; max-width: 720px; margin: 0 0 32px">An diesen fünf Bereichen messen wir GKV und PKV – was Sie heute bekommen und was vertraglich vereinbar wäre.</p>
     <div style="background: #FFFFFF; border: 1px solid #EADFD3; border-radius: 8px; overflow: hidden">
-      <div style="display: flex; align-items: baseline; gap: 18px; padding: 16px 26px; border-bottom: 1px solid #EADFD3">
-        <span style="font-family: 'Lora', serif; font-size: 15px; font-weight: 700; color: #BE8A4A; flex-shrink: 0">01</span>
-        <h3 style="font-family: 'Lora', serif; font-size: 18px; color: #3B322D; margin: 0; min-width: 170px">Ambulant</h3>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #7A6E64">Freie Arztwahl ohne Überweisung, Heilpraktiker, Sehhilfen</p>
-      </div>
-      <div style="display: flex; align-items: baseline; gap: 18px; padding: 16px 26px; border-bottom: 1px solid #EADFD3">
-        <span style="font-family: 'Lora', serif; font-size: 15px; font-weight: 700; color: #BE8A4A; flex-shrink: 0">02</span>
-        <h3 style="font-family: 'Lora', serif; font-size: 18px; color: #3B322D; margin: 0; min-width: 170px">Stationär</h3>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #7A6E64">Krankenhauswahl, Ein- oder Zweibettzimmer, Chefarzt</p>
-      </div>
-      <div style="display: flex; align-items: baseline; gap: 18px; padding: 16px 26px; border-bottom: 1px solid #EADFD3">
-        <span style="font-family: 'Lora', serif; font-size: 15px; font-weight: 700; color: #BE8A4A; flex-shrink: 0">03</span>
-        <h3 style="font-family: 'Lora', serif; font-size: 18px; color: #3B322D; margin: 0; min-width: 170px">Zahn</h3>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #7A6E64">Zahnbehandlung und Zahnersatz bis 100 %</p>
-      </div>
-      <div style="display: flex; align-items: baseline; gap: 18px; padding: 16px 26px; border-bottom: 1px solid #EADFD3">
-        <span style="font-family: 'Lora', serif; font-size: 15px; font-weight: 700; color: #BE8A4A; flex-shrink: 0">04</span>
-        <h3 style="font-family: 'Lora', serif; font-size: 18px; color: #3B322D; margin: 0; min-width: 170px">Verdienstausfall</h3>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #7A6E64">Krankentagegeld in passender Höhe</p>
-      </div>
-      <div style="display: flex; align-items: baseline; gap: 18px; padding: 16px 26px; border-bottom: 1px solid #EADFD3">
-        <span style="font-family: 'Lora', serif; font-size: 15px; font-weight: 700; color: #BE8A4A; flex-shrink: 0">05</span>
-        <h3 style="font-family: 'Lora', serif; font-size: 18px; color: #3B322D; margin: 0; min-width: 170px">Pflege</h3>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #7A6E64">Ergänzende Absicherung im Pflegefall</p>
-      </div>
+      <sc-for list="{{ bereiche }}" as="b" hint-placeholder-count="5">
+        <div style="display: flex; align-items: baseline; gap: 18px; padding: 16px 26px; border-bottom: 1px solid #EADFD3">
+          <span style="font-family: 'Lora', serif; font-size: 15px; font-weight: 700; color: #BE8A4A; flex-shrink: 0">{{ b.nr }}</span>
+          <h3 style="font-family: 'Lora', serif; font-size: 18px; color: #3B322D; margin: 0; min-width: 170px">{{ b.titel }}</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.5; color: #7A6E64">{{ b.text }}</p>
+        </div>
+      </sc-for>
     </div>
     <p style="font-size: 16px; color: #3B322D; margin: 20px 0 0">Was das in Ihrem Fall bedeutet, zeigen wir im Kennenlerngespräch.</p>
   </section>
@@ -202,7 +174,7 @@
 
   <!-- Im Alter -->
   <section id="alter" style="max-width: 1080px; margin: 0 auto; padding: 80px 24px 0">
-    <h2 style="font-family: 'Lora', serif; font-weight: 600; font-size: 32px; color: #9A6B2E; margin: 0 0 12px">„Wird die PKV im Alter unbezahlbar?"</h2>
+    <h2 style="font-family: 'Lora', serif; font-weight: 600; font-size: 32px; color: #9A6B2E; margin: 0 0 12px">„Wird die PKV im Alter unbezahlbar?“</h2>
     <p style="font-size: 17px; line-height: 1.6; color: #7A6E64; max-width: 760px; margin: 0 0 32px; text-wrap: pretty">Der häufigste Einwand – und ein berechtigter Prüfpunkt. Drei Mechanismen wirken dem entgegen. Und ehrlich gesagt: Auch die GKV-Beiträge steigen, unter anderem weil immer weniger Beitragszahler auf jeden Rentner kommen.</p>
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 24px">
       <div style="background: #FFFFFF; border: 1px solid #EADFD3; border-radius: 8px; padding: 24px 26px">
@@ -244,26 +216,13 @@
     <h2 style="font-family: 'Lora', serif; font-weight: 600; font-size: 32px; color: #9A6B2E; margin: 0 0 12px">Der Weg in vier Schritten</h2>
     <p style="font-size: 17px; line-height: 1.6; color: #7A6E64; max-width: 720px; margin: 0 0 32px">Sie wissen jederzeit, was als Nächstes passiert – und entscheiden nach jedem Schritt selbst, ob es weitergeht.</p>
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px">
-      <div style="background: #FFFFFF; border: 1px solid #EADFD3; border-radius: 8px; padding: 26px 24px; display: flex; flex-direction: column; gap: 10px">
-        <span style="font-family: 'Lora', serif; font-size: 30px; font-weight: 700; color: #BE8A4A">1</span>
-        <h3 style="font-family: 'Lora', serif; font-size: 18px; color: #3B322D; margin: 0; line-height: 1.3">Kennenlerngespräch (kostenlos)</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #7A6E64">15 Minuten per Video: Ihre Situation verstehen, die Systemunterschiede einordnen, erster Blick auf Ihre Zahlen. Danach entscheiden Sie, ob es weitergeht.</p>
-      </div>
-      <div style="background: #FFFFFF; border: 1px solid #EADFD3; border-radius: 8px; padding: 26px 24px; display: flex; flex-direction: column; gap: 10px">
-        <span style="font-family: 'Lora', serif; font-size: 30px; font-weight: 700; color: #BE8A4A">2</span>
-        <h3 style="font-family: 'Lora', serif; font-size: 18px; color: #3B322D; margin: 0; line-height: 1.3">Aktencheck und Risikovoranfrage</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #7A6E64">Mit einer auf den Zweck begrenzten Schweigepflichtentbindung holen wir Ihre Befunde direkt bei Ihren Ärzten ein und gleichen die Gesundheitsfragen damit ab. Erst dann fragen wir anonym bei mehreren Gesellschaften an, welche Tarife zu welchen Bedingungen möglich sind – ohne Ihren Namen, ohne Folgen für Sie.</p>
-      </div>
-      <div style="background: #FFFFFF; border: 1px solid #EADFD3; border-radius: 8px; padding: 26px 24px; display: flex; flex-direction: column; gap: 10px">
-        <span style="font-family: 'Lora', serif; font-size: 30px; font-weight: 700; color: #BE8A4A">3</span>
-        <h3 style="font-family: 'Lora', serif; font-size: 18px; color: #3B322D; margin: 0; line-height: 1.3">Finanzanalyse</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #7A6E64">Vollständige Aufnahme Ihrer Absicherung und Einkommenssituation als Grundlage für eine belastbare Empfehlung.</p>
-      </div>
-      <div style="background: #FFFFFF; border: 1px solid #EADFD3; border-radius: 8px; padding: 26px 24px; display: flex; flex-direction: column; gap: 10px">
-        <span style="font-family: 'Lora', serif; font-size: 30px; font-weight: 700; color: #BE8A4A">4</span>
-        <h3 style="font-family: 'Lora', serif; font-size: 18px; color: #3B322D; margin: 0; line-height: 1.3">Ihr Krankenversicherungskonzept und Umsetzung</h3>
-        <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #7A6E64">Konkreter Beitragsvergleich mit Zukunftsbetrachtung und Beitragsbremse. Wenn Sie sich entscheiden, begleiten wir die komplette Umsetzung aus einer Hand.</p>
-      </div>
+      <sc-for list="{{ schritte }}" as="s" hint-placeholder-count="4">
+        <div style="background: #FFFFFF; border: 1px solid #EADFD3; border-radius: 8px; padding: 26px 24px; display: flex; flex-direction: column; gap: 10px">
+          <span style="font-family: 'Lora', serif; font-size: 30px; font-weight: 700; color: #BE8A4A">{{ s.nr }}</span>
+          <h3 style="font-family: 'Lora', serif; font-size: 18px; color: #3B322D; margin: 0; line-height: 1.3">{{ s.titel }}</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #7A6E64">{{ s.text }}</p>
+        </div>
+      </sc-for>
     </div>
   </section>
 
@@ -294,38 +253,17 @@
   <section id="faq" style="max-width: 860px; margin: 0 auto; padding: 80px 24px 0">
     <h2 style="font-family: 'Lora', serif; font-weight: 600; font-size: 32px; color: #9A6B2E; margin: 0 0 28px">Häufige Fragen</h2>
     <div style="display: flex; flex-direction: column; gap: 10px">
-      <details>
-        <summary>Lohnt sich ein Wechsel von der GKV in die PKV?</summary>
-        <p class="faq-answer">Das hängt von Einkommen, Alter, Familienplanung und den gewünschten Leistungen ab. Für viele Angestellte über der Versicherungspflichtgrenze und Selbstständige bietet die PKV bessere Leistungen, oft bei geringerem Beitrag. Im Kennenlerngespräch zeigen wir das anhand Ihrer Zahlen – auch, wenn die Antwort „nein" lautet.</p>
-      </details>
-      <details>
-        <summary>Was bekomme ich in der PKV, was die GKV nicht bietet?</summary>
-        <p class="faq-answer">Freie Arztwahl ohne Überweisung, Chefarztbehandlung, Ein- oder Zweibettzimmer, Zahnersatz bis 100 %, Heilpraktiker, weltweiter Schutz und ein vertraglich garantierter Leistungsumfang. Und: Der Beitrag richtet sich nach dem Tarif, nicht nach dem Gehalt.</p>
-      </details>
-      <details>
-        <summary>Werden PKV-Beiträge im Alter unbezahlbar?</summary>
-        <p class="faq-answer">Drei Mechanismen wirken dem entgegen: Altersrückstellungen, der Wegfall des gesetzlichen 10-%-Zuschlags ab 60 und der Wegfall des Krankentagegelds im Ruhestand. Auch GKV-Beiträge steigen – demografisch bedingt. Mit der Beitragsbremse wird die heutige Ersparnis zur Entlastung im Ruhestand.</p>
-      </details>
-      <details>
-        <summary>Wie läuft der Beratungsprozess ab?</summary>
-        <p class="faq-answer">In vier festen Schritten: Kennenlerngespräch (kostenlos), Aktencheck mit anonymer Risikovoranfrage, Finanzanalyse, Ihr Krankenversicherungskonzept mit Umsetzung aus einer Hand. Nach jedem Schritt entscheiden Sie, ob es weitergeht.</p>
-      </details>
-      <details>
-        <summary>Was passiert, wenn ich eine Erkrankung vergesse?</summary>
-        <p class="faq-answer">Genau das verhindert der Aktencheck: Ihre Angaben entstehen aus den Unterlagen Ihrer Ärzte, nicht aus der Erinnerung. Die Verantwortung für die Richtigkeit bleibt bei Ihnen – wir sorgen dafür, dass Sie sie erfüllen können.</p>
-      </details>
-      <details>
-        <summary>Was ist mit meiner Familie?</summary>
-        <p class="faq-answer">In der PKV wird jede Person einzeln versichert. Bei mehreren nicht erwerbstätigen Angehörigen kann die GKV günstiger bleiben. Das rechnen wir konkret durch – ehrlich und mit Ihren Zahlen.</p>
-      </details>
-      <details>
-        <summary>Kann ich später zurück in die GKV?</summary>
-        <p class="faq-answer">Nur unter bestimmten Voraussetzungen, etwa bei einem Einkommen unter der Versicherungspflichtgrenze und vor der Altersgrenze von 55 Jahren. Der Wechsel ist eine langfristige Entscheidung – deshalb die gründliche Analyse vorab.</p>
-      </details>
-      <details>
-        <summary>Was ist die Beitragsbremse?</summary>
-        <p class="faq-answer">Der Vorsorge-Baustein Ihres Konzepts: Die monatliche Beitragsdifferenz wird steuerlich gefördert angelegt, damit im Ruhestand zusätzliche Mittel für die Krankenversicherung bereitstehen. Die Details gehören in Ihr Krankenversicherungskonzept.</p>
-      </details>
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="8">
+        <div style="background: #FFFFFF; border: 1px solid #EADFD3; border-radius: 8px; overflow: hidden">
+          <button onClick="{{ f.onToggle }}" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; background: none; border: none; cursor: pointer; text-align: left; padding: 18px 22px; font-family: 'Source Sans 3', sans-serif; font-size: 17px; font-weight: 600; color: #3B322D">
+            <span>{{ f.q }}</span>
+            <span style="font-family: 'Lora', serif; font-size: 20px; color: #BE8A4A; flex-shrink: 0">{{ f.icon }}</span>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <p style="margin: 0; padding: 0 22px 20px; font-size: 16px; line-height: 1.65; color: #7A6E64">{{ f.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
     </div>
   </section>
 
@@ -334,7 +272,8 @@
     <div style="background: #9A6B2E; border-radius: 12px; padding: 56px 48px; text-align: center">
       <h2 style="font-family: 'Lora', serif; font-weight: 600; font-size: 34px; color: #FFFFFF; margin: 0 0 16px">Jetzt Kennenlerngespräch vereinbaren</h2>
       <p style="font-size: 17.5px; line-height: 1.6; color: #F4E9D6; max-width: 640px; margin: 0 auto 28px; text-wrap: pretty">In 15 Minuten finden wir gemeinsam heraus, ob und wie sich ein Wechsel für Sie lohnt – mit einem klaren Vergleich Ihrer Leistungen und Beiträge. Unverbindlich und kostenfrei. Deutschlandweit, online per Video.</p>
-      <a href="https://calendly.com/beitragswandel/erstgespraech" class="btn-cta" style="font-size: 18px; padding: 15px 32px">Termin auswählen</a>
+      <a href="{{ bookingUrl }}" style="display: inline-block; background: #FFFFFF; color: #9A6B2E; text-decoration: none; font-weight: 700; font-size: 18px; padding: 15px 32px; border-radius: 6px" style-hover="background: #F4E9D6; color: #9A6B2E">Termin auswählen</a>
+      <p style="font-size: 13.5px; color: #EADFD3; margin: 18px 0 0; font-family: monospace">[ Buchungs-Link: Platzhalter ]</p>
     </div>
   </section>
 
@@ -350,6 +289,46 @@
     <span>© 2026 Beitragswandel</span>
   </div>
 </footer>
-
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;bookingUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;#buchung&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Inhalt&quot;}, &quot;showAnker&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Inhalt&quot;}}">
+class Component extends DCLogic {
+  state = { open: -1 };
+  renderVals() {
+    const FAQ = [
+      ["Lohnt sich ein Wechsel von der GKV in die PKV?", "Das hängt von Einkommen, Alter, Familienplanung und den gewünschten Leistungen ab. Für viele Angestellte über der Versicherungspflichtgrenze und Selbstständige bietet die PKV bessere Leistungen, oft bei geringerem Beitrag. Im Kennenlerngespräch zeigen wir das anhand Ihrer Zahlen – auch, wenn die Antwort „nein“ lautet."],
+      ["Was bekomme ich in der PKV, was die GKV nicht bietet?", "Freie Arztwahl ohne Überweisung, Chefarztbehandlung, Ein- oder Zweibettzimmer, Zahnersatz bis 100 %, Heilpraktiker, weltweiter Schutz und ein vertraglich garantierter Leistungsumfang. Und: Der Beitrag richtet sich nach dem Tarif, nicht nach dem Gehalt."],
+      ["Werden PKV-Beiträge im Alter unbezahlbar?", "Drei Mechanismen wirken dem entgegen: Altersrückstellungen, der Wegfall des gesetzlichen 10-%-Zuschlags ab 60 und der Wegfall des Krankentagegelds im Ruhestand. Auch GKV-Beiträge steigen – demografisch bedingt. Mit der Beitragsbremse wird die heutige Ersparnis zur Entlastung im Ruhestand."],
+      ["Wie läuft der Beratungsprozess ab?", "In vier festen Schritten: Kennenlerngespräch (kostenlos), Aktencheck mit anonymer Risikovoranfrage, Finanzanalyse, Ihr Krankenversicherungskonzept mit Umsetzung aus einer Hand. Nach jedem Schritt entscheiden Sie, ob es weitergeht."],
+      ["Was passiert, wenn ich eine Erkrankung vergesse?", "Genau das verhindert der Aktencheck: Ihre Angaben entstehen aus den Unterlagen Ihrer Ärzte, nicht aus der Erinnerung. Die Verantwortung für die Richtigkeit bleibt bei Ihnen – wir sorgen dafür, dass Sie sie erfüllen können."],
+      ["Was ist mit meiner Familie?", "In der PKV wird jede Person einzeln versichert. Bei mehreren nicht erwerbstätigen Angehörigen kann die GKV günstiger bleiben. Das rechnen wir konkret durch – ehrlich und mit Ihren Zahlen."],
+      ["Kann ich später zurück in die GKV?", "Nur unter bestimmten Voraussetzungen, etwa bei einem Einkommen unter der Versicherungspflichtgrenze und vor der Altersgrenze von 55 Jahren. Der Wechsel ist eine langfristige Entscheidung – deshalb die gründliche Analyse vorab."],
+      ["Was ist die Beitragsbremse?", "Der Vorsorge-Baustein Ihres Konzepts: Die monatliche Beitragsdifferenz wird steuerlich gefördert angelegt, damit im Ruhestand zusätzliche Mittel für die Krankenversicherung bereitstehen. Die Details gehören in Ihr Krankenversicherungskonzept."]
+    ];
+    return {
+      bookingUrl: this.props.bookingUrl ?? "#buchung",
+      showAnker: this.props.showAnker ?? true,
+      bereiche: [
+        { nr: "01", titel: "Ambulant", text: "Freie Arztwahl ohne Überweisung, Heilpraktiker, Sehhilfen" },
+        { nr: "02", titel: "Stationär", text: "Krankenhauswahl, Ein- oder Zweibettzimmer, Chefarzt" },
+        { nr: "03", titel: "Zahn", text: "Zahnbehandlung und Zahnersatz bis 100 %" },
+        { nr: "04", titel: "Verdienstausfall", text: "Krankentagegeld in passender Höhe" },
+        { nr: "05", titel: "Pflege", text: "Ergänzende Absicherung im Pflegefall" }
+      ],
+      schritte: [
+        { nr: "1", titel: "Kennenlerngespräch (kostenlos)", text: "15 Minuten per Video: Ihre Situation verstehen, die Systemunterschiede einordnen, erster Blick auf Ihre Zahlen. Danach entscheiden Sie, ob es weitergeht." },
+        { nr: "2", titel: "Aktencheck und Risikovoranfrage", text: "Mit einer auf den Zweck begrenzten Schweigepflichtentbindung holen wir Ihre Befunde direkt bei Ihren Ärzten ein und gleichen die Gesundheitsfragen damit ab. Erst dann fragen wir anonym bei mehreren Gesellschaften an, welche Tarife zu welchen Bedingungen möglich sind – ohne Ihren Namen, ohne Folgen für Sie." },
+        { nr: "3", titel: "Finanzanalyse", text: "Vollständige Aufnahme Ihrer Absicherung und Einkommenssituation als Grundlage für eine belastbare Empfehlung." },
+        { nr: "4", titel: "Ihr Krankenversicherungskonzept und Umsetzung", text: "Konkreter Beitragsvergleich mit Zukunftsbetrachtung und Beitragsbremse. Wenn Sie sich entscheiden, begleiten wir die komplette Umsetzung aus einer Hand." }
+      ],
+      faqs: FAQ.map(([q, a], i) => ({
+        q, a,
+        open: this.state.open === i,
+        icon: this.state.open === i ? "–" : "+",
+        onToggle: () => this.setState(s => ({ open: s.open === i ? -1 : i }))
+      }))
+    };
+  }
+}
+</script>
 </body>
 </html>
