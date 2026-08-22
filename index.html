@@ -66,12 +66,17 @@
       </div>
       <p style="font-size: 14px; color: #9C7C5C; margin: 16px 0 0">15 Minuten · per Video · kostenlos und unverbindlich</p>
     </div>
-    <div>
-      <div style="aspect-ratio: 16/9; border-radius: 10px; border: 1px solid #EADFD3; background: repeating-linear-gradient(45deg, #F4E9D6, #F4E9D6 12px, #FBF5EF 12px, #FBF5EF 24px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px">
-        <div style="width: 56px; height: 56px; border-radius: 50%; background: #FFFFFF; border: 1px solid #EADFD3; display: flex; align-items: center; justify-content: center; color: #9A6B2E; font-size: 20px">▶</div>
-        <div style="font-family: monospace; font-size: 12px; color: #9C7C5C">[ Platzhalter: 90-Sekunden-Video ]</div>
-      </div>
-      <p style="font-size: 15px; color: #7A6E64; margin: 12px 4px 0; line-height: 1.5">In 90 Sekunden: was die PKV bietet – und wo sich ein Wechsel wirklich lohnt.</p>
+    <!-- min-width: 0, sonst waechst dieses Grid-Item auf die Breite der Animations-
+         buehne (1080px, flex-shrink: 0) statt sich der Spalte zu fuegen — Grid-Items
+         haben von Haus aus min-width: auto. -->
+    <div style="min-width: 0">
+      <!-- Fakten-Animation. Quadratisch, nicht 16:9: die Buehne ist im Breitformat
+           1920px breit und wuerde in dieser Spalte auf Faktor 0,24 skaliert — der
+           Fliesstext laege bei rund 6px. Das 1:1-Format ist 1080px breit und eigens
+           gesetzt, hier also Faktor 0,42. -->
+      <div id="pkv-animation" style="aspect-ratio: 1 / 1; border-radius: 10px; border: 1px solid #EADFD3; background: #F3F2F2; overflow: hidden"></div>
+      <p style="font-size: 15px; color: #7A6E64; margin: 12px 4px 0; line-height: 1.5">In 65 Sekunden: Demografie, Beitragsentwicklung und das Zeitfenster bis 2027. Ohne Ton, mit Untertiteln.</p>
+      <p style="font-size: 13px; color: #9C7C5C; margin: 6px 4px 0; line-height: 1.5">Quellen am Ende der Animation. Projektionen sind „Wenn-Dann“-Rechnungen, keine Vorhersagen.</p>
     </div>
   </section>
 
@@ -149,14 +154,6 @@
       </div>
     </div>
     <p style="font-size: 16px; color: #3B322D; margin: 20px 0 0">Was das in Ihrem Fall bedeutet, zeigen wir im Kennenlerngespräch.</p>
-  </section>
-
-  <!-- Fakten-Animation -->
-  <section id="fakten-animation" style="max-width: 1080px; margin: 0 auto; padding: 80px 24px 0">
-    <h2 style="font-family: 'Lora', serif; font-weight: 600; font-size: 32px; color: #9A6B2E; margin: 0 0 12px">Die Fakten in 65 Sekunden</h2>
-    <p style="font-size: 17px; line-height: 1.6; color: #7A6E64; max-width: 720px; margin: 0 0 32px">Sieben Grafiken zur Ausgangslage: Demografie, Beitragsentwicklung und das Zeitfenster bis 2027. Läuft automatisch und ohne Ton, mit Untertiteln.</p>
-    <div id="pkv-animation" style="border: 1px solid #EADFD3; border-radius: 8px; background: #F3F2F2; aspect-ratio: 16 / 9; overflow: hidden"></div>
-    <p style="font-size: 14px; line-height: 1.6; color: #7A6E64; margin: 12px 0 0">Die Quellen werden am Ende der Animation eingeblendet. Projektionen sind „Wenn-Dann“-Rechnungen, keine Vorhersagen.</p>
   </section>
 
   <!-- Zahlen -->
@@ -414,13 +411,16 @@
   var host = document.getElementById('pkv-animation');
   if (!host) return;
 
-  // Am Handy hochkant, sonst im Breitformat — gleiche Quelle, anderes Satzbild.
+  // Am Handy hochkant, sonst quadratisch — gleiche Quelle, anderes Satzbild.
+  // Quadrat statt Breitformat, weil die Animation in der Hero-Spalte steht: die
+  // 16:9-Buehne ist 1920px breit und wuerde hier auf 0,24 skaliert, das Quadrat
+  // (1080px, eigene Type-Scale) nur auf 0,42.
   var narrow = window.matchMedia('(max-width: 760px)');
   var still = window.matchMedia('(prefers-reduced-motion: reduce)');
   var player = null, mountedFormat = null;
 
   function build() {
-    var format = narrow.matches ? 'portrait' : 'landscape';
+    var format = narrow.matches ? 'portrait' : 'square';
     if (format === mountedFormat) return;
     if (player) player.pause();
     player = window.PKVAnimation.mount(host, format);
