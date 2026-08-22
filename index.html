@@ -38,6 +38,9 @@
       section[style*="padding: 88px 24px 96px"] { padding: 56px 20px 64px !important; }
       section[style*="padding: 80px 24px 0"] { padding: 48px 20px 0 !important; }
       table { width: 100%; }
+      /* Die Animation laeuft am Handy hochkant: bei gleicher Spaltenbreite ist die
+         9:16-Fassung deutlich groesser gesetzt als die 16:9 und damit lesbar. */
+      #pkv-animation { aspect-ratio: 9 / 16 !important; }
     }
   </style>
 </head>
@@ -146,6 +149,14 @@
       </div>
     </div>
     <p style="font-size: 16px; color: #3B322D; margin: 20px 0 0">Was das in Ihrem Fall bedeutet, zeigen wir im Kennenlerngespräch.</p>
+  </section>
+
+  <!-- Fakten-Animation -->
+  <section id="fakten-animation" style="max-width: 1080px; margin: 0 auto; padding: 80px 24px 0">
+    <h2 style="font-family: 'Lora', serif; font-weight: 600; font-size: 32px; color: #9A6B2E; margin: 0 0 12px">Die Fakten in 65 Sekunden</h2>
+    <p style="font-size: 17px; line-height: 1.6; color: #7A6E64; max-width: 720px; margin: 0 0 32px">Sieben Grafiken zur Ausgangslage: Demografie, Beitragsentwicklung und das Zeitfenster bis 2027. Läuft automatisch und ohne Ton, mit Untertiteln.</p>
+    <div id="pkv-animation" style="border: 1px solid #EADFD3; border-radius: 8px; background: #F3F2F2; aspect-ratio: 16 / 9; overflow: hidden"></div>
+    <p style="font-size: 14px; line-height: 1.6; color: #7A6E64; margin: 12px 0 0">Die Quellen werden am Ende der Animation eingeblendet. Projektionen sind „Wenn-Dann“-Rechnungen, keine Vorhersagen.</p>
   </section>
 
   <!-- Zahlen -->
@@ -393,6 +404,63 @@
       frame.style.minHeight = '0';
     }
   });
+})();
+</script>
+
+<!-- Fakten-Animation: laeuft nur, solange sie sichtbar ist -->
+<script src="/assets/animation/pkv-animation.js" defer></script>
+<script>
+(function () {
+  var host = document.getElementById('pkv-animation');
+  if (!host) return;
+
+  // Am Handy hochkant, sonst im Breitformat — gleiche Quelle, anderes Satzbild.
+  var narrow = window.matchMedia('(max-width: 760px)');
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var player = null, mountedFormat = null;
+
+  function build() {
+    var format = narrow.matches ? 'portrait' : 'landscape';
+    if (format === mountedFormat) return;
+    if (player) player.pause();
+    player = window.PKVAnimation.mount(host, format);
+    mountedFormat = format;
+    // Reduzierte Bewegung: stehendes Titelbild statt Endlosschleife.
+    if (still.matches) player.seek(3.0);
+  }
+
+  function start() {
+    build();
+    if (still.matches) return;
+
+    // Nur laufen lassen, wenn die Sektion im Bild ist — sonst frisst eine
+    // Endlosschleife am unteren Seitenende dauerhaft CPU und Akku.
+    if (typeof IntersectionObserver === 'function') {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { e.isIntersecting ? player.play() : player.pause(); });
+      }, { threshold: 0.25 }).observe(host);
+    } else {
+      player.play();
+    }
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden && player) player.pause();
+    });
+  }
+
+  // Erst starten, wenn Cormorant und Lora da sind: mit Fallback-Metriken
+  // brechen die eng gesetzten Headlines waehrend des Laufs um.
+  function boot() {
+    if (!window.PKVAnimation) return;
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(start);
+    else start();
+  }
+
+  if (document.readyState === 'complete') boot();
+  else window.addEventListener('load', boot);
+
+  // Beim Drehen des Geraets das Format wechseln.
+  var onChange = function () { if (player) { build(); if (!still.matches) player.play(); } };
+  narrow.addEventListener ? narrow.addEventListener('change', onChange) : narrow.addListener(onChange);
 })();
 </script>
 </body>
